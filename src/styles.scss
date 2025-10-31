@@ -1,1 +1,173 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'fonts';
+@import 'margins';
+
+:root {
+  --dark-color: #000000;
+  --light-color: #ffffff;
+  --primary-color: #ae7aff;
+  --gray-color: #5f646d;
+  --dark-hover-color: #161616;
+  --light-transparent-color: rgba(255, 255, 255, 0.75);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: 'JetBrains Mono';
+  background: var(--dark-color);
+  color: var(--light-color);
+  background-image: url(/assert/imgs/background.jpg);
+  background-repeat: no-repeat; /* запретить повторение */
+  background-size: cover; /* растянуть на весь экран */
+  background-position: center; /* центрировать */
+  background-attachment: fixed; /* чтобы фон не двигался при прокрутке */
+}
+
+.skill-tag {
+  text-align: center;
+  padding: 0 8px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  display: inline;
+  line-height: 24px;
+  font-size: 12px;
+  font-weight: 700;
+  height: 24px;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  background: var(--primary-color);
+  color: var(--dark-color);
+  padding: 10px 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid var(--dark-color);
+}
+
+.btn-shadow {
+  position: relative;
+  &:before {
+    border-radius: 4px;
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    z-index: -1;
+    background: var(--gray-color);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.h1 {
+  font-size: 48px;
+  line-height: 24px;
+  font-weight: 800;
+}
+.h6 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.medium-text {
+  font-family: 'JetBrains Mono', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.tt-control-label {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  display: block;
+}
+
+.tt-form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tt-form-label__text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--light-transparent-color);
+}
+
+.tt-form-input {
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  padding: 12px 0;
+  background: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  height: 33px;
+  color: var(--light-color);
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.tt-textarea {
+  height: 84px;
+  resize: none;
+}
+
+.regular {
+  font-style: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.tt-input {
+  width: 100%;
+  margin-top: 8px;
+  display: block;
+  border: 1px solid var(--light-color);
+  border-radius: 4px;
+  padding: 12px 20px;
+  background: var(--dark-color);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: var(--light-color);
+}
+
+.tt-textarea {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray-color) var(--dark-color);
+}
+
+.h4 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 32px;
+}

@@ -1,0 +1,91 @@
+:host {
+  display: block;
+  padding: 20px 12px;
+  background: var(--dark-color);
+  position: relative;
+}
+
+.main-menu-list {
+  display: grid;
+  grid-gap: 8px;
+  list-style: none;
+}
+
+.menu-item {
+  border: none;
+  cursor: pointer;
+  padding: 16px 12px;
+  background: none;
+  color: var(--light-color);
+  display: grid;
+  grid-template-columns: 16px 1fr max-content;
+  grid-gap: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  border-radius: 2px;
+  text-decoration: none;
+  &.active,
+  &:hover,
+  &:focus-visible {
+    color: var(--primary-color);
+    background: var(--dark-hover-color);
+    .menu-item svg {
+      color: var(--primary-color);
+    }
+  }
+}
+.sidebar__footer {
+  position: absolute;
+  bottom: 20px;
+  width: calc(100% - 20px);
+  background: var(--dark-hover-color);
+  border-radius: 2px;
+  display: grid;
+  padding: 4px 16px;
+  grid-template-columns: 32px 1fr 16px;
+  grid-gap: 12px;
+  align-items: center;
+  Img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    width: 32px;
+  }
+  .username-text {
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+}
+
+.menu-item svg {
+  width: 16px;
+  height: 16px;
+}
+
+.to-subscribers {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+.to-subscribers-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.to-subscribers-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.settings-btn {
+  svg {
+    width: 13px;
+    height: 13px;
+    color: var(--primary-color);
+  }
+}
